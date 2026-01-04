@@ -1,3 +1,6 @@
+// Calcula a área do círculo
+// 4/1/2025
+
 #include <stdio.h>
 
 #define PI 3.14159
