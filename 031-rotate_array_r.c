@@ -6,7 +6,7 @@
 
 void rotate_array_right(int array[], int n) {
   int temp = array[n - 1];
-  for (int i = n - 1; i >= 0; i--) {
+  for (int i = n - 2; i >= 0; i--) {
     array[i + 1] = array[i];
   }
   array[0] = temp;
@@ -26,11 +26,11 @@ int main() {
   int a[] = {3, 9, 8, 1, 7, 6};
   int len = sizeof(a) / sizeof(a[0]);
   imprime_array(a, len);
-  printf("-----------------------\n");
+  printf("------------------\n");
   for (int i = 0; i < len; i++) {
     rotate_array_right(a, len);
     imprime_array(a, len);
-    printf("-----------------------\n");
+    printf("------------------\n");
   }
   return 0;
 }
