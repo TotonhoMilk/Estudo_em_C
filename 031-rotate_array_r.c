@@ -1,3 +1,7 @@
+// Rotação do array para direita.
+// O último elemento vira o primeiro
+// 13/1/2026
+
 #include <stdio.h>
 
 void rotate_array_right(int array[], int n) {
