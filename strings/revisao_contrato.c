@@ -13,9 +13,8 @@ int main() {
       break;
 
     int len = strlen(N);
-    char *p;
     int cont = 0;
-    int j = 0;
+
     for (int i = 0; i < len; i++) {
       if (D == '0') {
         while (N[i] == D) {
@@ -28,6 +27,7 @@ int main() {
         cont++;
       }
     }
+
     R[cont] = '\0';
 
     if (R[0] == '0' && R[1] == '0')
