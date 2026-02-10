@@ -74,23 +74,28 @@ int main() {
 
   if (h_fim < h_inicio) {
     q_dias -= 1;
-    q_horas = h_fim - h_inicio + 24;
+    q_horas = (h_fim - h_inicio) + 24;
   } else {
     q_horas = h_fim - h_inicio;
   }
 
   if (m_fim < m_inicio) {
     q_horas -= 1;
-    q_min = m_fim - m_inicio + 60;
+    q_min = (m_fim - m_inicio) + 60;
   } else {
     q_min = m_fim - m_inicio;
   }
 
   if (s_fim < s_inicio) {
     q_min -= 1;
-    q_seg = s_fim - s_inicio + 60;
+    q_seg = (s_fim - s_inicio) + 60;
   } else {
     q_seg = s_fim - s_inicio;
+  }
+
+  if (q_horas < 0) {
+    q_dias -= 1;
+    q_horas += 24;
   }
 
   printf("%d dia(s)\n", q_dias);
